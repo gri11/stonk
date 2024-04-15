@@ -47,15 +47,6 @@
 
 ### Simple Baseline
 
-$ X \in \reals^{T \times F} \to p \in \reals \to r \in \reals $
-
-$ T = 16, F = 5 $
-
-$ r^{t} = \frac{p^{t} - p^{t-1}}{p^{t-1}}$
-
-$ L = L_\text{MSE} + \alpha \sum_{i=1}^{N} \sum_{j=1}^{N} \max\left(0, -(\hat{r}_{{t}_{i}} - \hat{r}_{{{t}_{j}}})({r}_{{t}_{i}} - {r}_{{{t}_{j}}})\right) $
-
-
 ## Result
 | Model | Train Loss | Val Loss | Test Loss |
 | ----- | ---------- | -------- | --------- |
