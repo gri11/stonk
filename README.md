@@ -1,8 +1,17 @@
 # Stock Prediction Project
 
 ## Plan
-- Run baselines
-  - Stock Mixer
+  - Baselines
+    - LSTM
+    - GRU
+    - ResNLS
+  - Hyperparameter tuning
+  - Increase layers
+  - Increase features
+
+  - if ton: change dataset
+    - Stock Mixer
+
 - New ideas
   - Apply Transformers
 - Implement ideas
@@ -19,11 +28,11 @@
 
 ### Progress 1 Simple Baseline
 - [ ] Setup experiments (data, metrics, tools)
-   - [ ] Choose metrics
-- [ ] Create a simple baseline
-
-### Note
-- git submodule
+   - [ ] choose metrics
+- [ ] Run baselines
+  - [ ] write more metrics (3)
+  - [ ] LSTM GRU (S&P500)
+  - [ ] write model ResNLS (1)
 
 ## Problem Setup
 
@@ -47,7 +56,7 @@
 
 ### Simple Baseline
 
-$ X \in \reals^{T \times F} \to p \in \reals \to r \in \reals $
+$ X \in \mathbb{R}^{T \times F} \to p \in \mathbb{R} \to r \in \mathbb{R} $
 
 $ T = 16, F = 5 $
 
@@ -57,9 +66,9 @@ $ L = L_\text{MSE} + \alpha \sum_{i=1}^{N} \sum_{j=1}^{N} \max\left(0, -(\hat{r}
 
 
 ## Result
-| Model | Train Loss | Val Loss | Test Loss |
-| ----- | ---------- | -------- | --------- |
-|       |            |          |           |
+| Model | Metric 1 | Metric 2 | Metric 3 |
+| ----- | -------- | -------- | -------- |
+|       |          |          |          |
 
 ## Reference
 - [StockMixer](https://ojs.aaai.org/index.php/AAAI/article/view/28681)
