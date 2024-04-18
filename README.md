@@ -37,6 +37,17 @@
 ## Problem Setup
 
 ### Dataset
+
+#### LSTM GRU ResNLS
+|                    | S&P500   |
+| ------------------ | -------- |
+| Start Time (Y-M-D) | 04-08-19 |
+| End Time           | 19-10-03 |
+| Train Days         | 3366     |
+| Val Days           | 251      |
+| Test Days          | 191      |
+
+#### StockMixer
 |            | S&P500   |
 | ---------- | -------- |
 | Start Time | 16-01-04 |
@@ -66,9 +77,11 @@ $ L = L_\text{MSE} + \alpha \sum_{i=1}^{N} \sum_{j=1}^{N} \max\left(0, -(\hat{r}
 
 
 ## Result
-| Model | Metric 1 | Metric 2 | Metric 3 |
-| ----- | -------- | -------- | -------- |
-|       |          |          |          |
+| model  |    MAPE |    MASE |      RMSE |   SMAPE |       MAE | sharp_ratio | Directional Accuracy |
+| :----- | ------: | ------: | --------: | ------: | --------: | ----------: | -------------------: |
+| gru    | 2.51945 | 2.60299 |  0.103868 | 2.56355 | 0.0842575 |    0.411069 |              69.4737 |
+| lstm   | 1.68196 | 1.72826 | 0.0750012 | 1.69879 | 0.0560689 |    0.188782 |              67.8947 |
+| resnls | 1.77126 |  1.4714 | 0.0769175 | 1.79153 | 0.0590094 |    0.228892 |              70.5263 |
 
 ## Reference
 - [StockMixer](https://ojs.aaai.org/index.php/AAAI/article/view/28681)
